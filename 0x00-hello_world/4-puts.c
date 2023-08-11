@@ -1,6 +1,7 @@
 #include <stdio.h>
-int main ()
+int main(viod)
+/*this is my task in c */
 {
-  puts("\"Programming is like building a multilingual puzzle");
-  return 0;
+ puts("\"Programming is like building a multilingual puzzle");
+ return (0);
 }
