@@ -2,16 +2,16 @@
 /**
  * main - Entry point
  *
- * Description : prints all single digit numbers of base 10 starting from 0, 
+* Description : prints all single digit numbers of base 10 starting from 0, 
  *
  * Return: Always (0) (Success)
  */
 
 int main(void)
 {
-	char ch;
+	char ch = '0';
 
-	for (ch = 0 ; ch < 10 ; ch++)
+	for (ch = '0'; ch < 10; ch++)
 	{
 		putchar(ch);
 
