@@ -9,13 +9,13 @@
 
 int main(void)
 {
-	char ch = '0';
+	int ch;
 
-	for (ch = '0'; ch < 10; ch++)
+	for (ch = 0; ch < 10; ch++)
 	{
-		putchar(ch);
+		printf("%d", ch);
+	}	
 
-	}
-		putchar('\n');
+		printf("\n");
 	return (0);
 }
