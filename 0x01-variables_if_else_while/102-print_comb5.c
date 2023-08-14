@@ -8,18 +8,34 @@
  */
 int main(void)
 {
-	int x;
-
-	for (x = 0; x <= 9; x++)
+	int a;
+	int b;
+	int c;
+	int d;
+	
+	for ( a = 0 ; a < 10 ; a++ )
 	{
-		putchar((x % 10) + '0');
-		if (x == 9)
-			continue;
-
-		putchar(',');
-		putchar(' ');
+		for ( b = 0 ; b <= 10 ; b++ )
+		{
+			for ( c = 0 ; c < 10 ; c++ )
+			{
+				for ( d = 0 ; d <= 10 ; d++ )
+				{
+					putchar('0' + a);
+					putchar('0' + b);
+					putchar(32);
+					putchar('0' + c);
+					putchar('0' + d);
+					if (!(a == 9 && b == 8))
+					{
+						putchar(',');
+						putchar(32);
+					}
+					c++;
+				}
+			}
+		}
 	}
-
 	putchar('\n');
 	return (0);
 }
