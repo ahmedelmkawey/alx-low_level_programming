@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (Success)
  *
- * main.h is header file 
+ * main.h is header file
  *
  */
 
@@ -21,5 +21,5 @@ int main(void)
 	_putchar('\n');
 
 	return (0);
-	
+
 }
