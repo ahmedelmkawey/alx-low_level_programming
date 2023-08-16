@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * description : prints every minute of song starting from 00:00 to 23:59
- * Return: 0
  * jack_bauer - Jack Bauer, starting from 00:00 to 23:59.
- *
+ * Return: 0
  */
 
 void jack_bauer(void)
