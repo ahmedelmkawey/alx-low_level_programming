@@ -1,9 +1,11 @@
+#include "main.h"
 /**
- *print_square  - check the code
- *@size :  is the size of the square
+ * print_square  - check the code
+ * @size :  is the size of the square
  * Return: Always 0.
  */
-int main(void)
+
+void print_square(int size)
 {
 	int a, b;
 
@@ -14,11 +16,10 @@ int main(void)
 			for (b = 0; b < size; b++)
 			{
 				_putchar('#');
-				_putchar('\n');
+			_putchar('\n');
 			}
 		}
 	}
-
-		else
-			_putchar('\n');
-}	
+	else
+		_putchar('\n');
+}
