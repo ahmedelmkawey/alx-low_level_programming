@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * puts_half - printing half of string
  * @str : array variable
