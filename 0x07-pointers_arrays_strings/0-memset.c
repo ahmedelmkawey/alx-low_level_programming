@@ -11,18 +11,15 @@
  */
 
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	char *dest;
+	unsigned int i;
 
-
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		n--;
+		s[i] = b;
+		i++;
 	}
-
-	return (dest);
+	return (s);
 }
