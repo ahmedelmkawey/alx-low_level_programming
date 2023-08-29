@@ -1,13 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
-
 /**
- * _memcpy - copy memory area
- * @dest: char array to copy into
- * @src: char array to copy from
- * @n: number of elements to copy
- * Return: pointer to `dest`
+ * _memset - fill n bytes of memory with a constant value
+ * @s: pointer to memory area
+ * @b: constant value
+ * @n: number of bytes to fill
+ * Return: memory area
  */
 
 
