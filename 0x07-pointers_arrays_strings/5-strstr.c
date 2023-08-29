@@ -10,6 +10,7 @@
  * Return: 0 if strings are the same
  * any other number if they are different.
  */
+
 int _strncmp(char *s1, char *s2, unsigned int b)
 {
 	unsigned int i;
