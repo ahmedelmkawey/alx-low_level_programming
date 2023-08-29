@@ -3,22 +3,25 @@
 
 
 /**
- * _strchr - locate character in a string
- * @s: char array string
- * @c: char to look for
- * Return: NULL if char not found, or pointer to first occurrence of char `c`
+ * _memcpy - copy n bytes of memory from source to destination
+ * @dest: destination
+ * @src: source
+ * @n: number of bytes
+ * Return: pointer to dest
  */
 
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	while (*s != '\0')
+
+	int size = n;
+
+	if (size > 0)
 	{
-		if (*s == c)
-			return (s);
-		else if (*(s + 1) == c)
-			return (s + 1);
-		s++;
+		int i;
+
+		for (i = 0; i < size; i++)
+			dest[i] = src[i];
 	}
 
-	return (s + 1);
+	return (dest);
 }
