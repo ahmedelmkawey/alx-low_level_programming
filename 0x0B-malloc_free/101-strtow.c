@@ -1,33 +1,75 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * strtow - concatenates arguments.
- * @str: String to be splitted.
- *
- * Return: a pointer to array of String.
+ * cwords - count number of words in a given string.
+ * @str: given string.
+ * @l: lenght of string.
+ * Return: number of words.
+ */
+int cwords(char *str, int l)
+{
+	int i, count_w = 0;
+
+	for (i = 0; i < l; i++)
+	{
+		if (str[i] != ' ')
+		{
+			for (; str[i] != ' '; i++)
+				;
+			count_w++;
+		}
+	}
+	return (count_w);
+}
+
+/**
+ * strtow - splits a string into words.
+ * @str: input string.
+ * Return: Pointer to array.
  */
 
 char **strtow(char *str)
 {
-	char *array = NULL;
-	unsigned int i = 0, j = 0, k;
+	char **p;
+	int count_w = 0, count_c = 0, i, leng, x = 0, fr, j = 0, z = 0;
 
-	if (strncmp(str, "", 1) || str == NULL)
-		return (NULL);
-	array = malloc((i + j + 1) * sizeof(char));
-	if (array == NULL)
-		return (NULL);
-	for (k = 0; k < i; k++)
-		array[k] = str[k];
-	i = k;
-	for (k = 0; k < j; k++)
+	if (str == NULL || *str == '\0')
 	{
-		array[i] = str[k];
-		i++;
+		return (NULL);
 	}
-	array[i] = '\0';
-	return (NULL);
+	for (leng = 0; str[leng] != '\0'; leng++)
+		;
+	count_w = cwords(str, leng);
+	p = (char **)malloc((count_w + 1) * sizeof(char *));
+	if (p == NULL || count_w == 0)
+	{
+		free(p);
+		return (NULL);
+	}
+	for (i = 0; i < leng; i++)
+	{
+		if (str[i] != ' ')
+		{z = 1;
+			for (count_c = 0; str[i] != ' ' && str[i] != '\0'; i++)
+				count_c++;
+			p[x] = (char *)malloc((count_c + 1) * sizeof(char));
+			if (p[x] == NULL)
+			{
+				for (fr = 0; fr <= x; fr++)
+					free(p[fr]);
+				free(p);
+				return (NULL);
+			}
+			for (j = 0; j < count_c; j++)
+				p[x][j] = str[(i - count_c) + j];
+			p[x][j] = '\0';
+			x++;
+		}
+	}
+	if (z != 1)
+		return (NULL);
+	p[x] = NULL;
+	return (p);
 }
