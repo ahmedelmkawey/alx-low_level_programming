@@ -45,4 +45,3 @@ int main(void)
     free(a);
     return (0);
 }
-
